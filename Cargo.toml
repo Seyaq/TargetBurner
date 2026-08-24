@@ -1,0 +1,17 @@
+[package]
+name = "Lucifer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3           # Optimisations maximales pour la vitesse (0 à 3)
+lto = "fat"             # Link-Time Optimization globale (analyse tout le code)
+codegen-units = 1       # Réduit les unités de compilation pour une meilleure optimisation (compilation plus lente, code plus rapide)
+panic = "abort"         # Supprime la gestion d'unwind des panics (allège et accélère le code)
+strip = true            # Retire tous les symboles de debug du binaire final (réduit fortement la taille)
+
+[[bin]]
+name = "cargo-lucifer"
+path = "src/main.rs"
