@@ -1,1 +1,1 @@
-Come discord : @imseyaq
+TargetBurner : Lightweight Cleaner of /Target in Cli
